@@ -21,9 +21,9 @@ export default function Sobre() {
     }, [])
 
     return (
+
+        
         <main className={styles.main}>
-
-
             <Card
                 fontSize={{ base: "10px", md: "32px" }} color="hermesBlue.400"
                 p={{ base: 2, md: 4 }}
@@ -32,7 +32,7 @@ export default function Sobre() {
                 backdropFilter="blur(10px)"
                 boxShadow="4px 4px 8px black"
                 bgGradient="linear(130deg, rgba(241,226,194,0.8) 0%, rgba(242,242,243,0.8) 40%, rgba(242,242,243,1) 100%)"
-                position="absolute" bottom={{base:"20%",md:"40%"}} right="0" mx={{ base: 0, md: 10 }} zIndex={10}
+                right="0" mx={{ base: 0, md: 10 }} zIndex={10}
             >
                 <Stack direction={{ base: "column", md: "row" }} justifyContent="space-around">
                     <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
@@ -75,13 +75,13 @@ export default function Sobre() {
             <Text
                 fontSize="10vw" color="hermesBlue.400"
                 textAlign="justify"
-                position="absolute" top={{ base: "-5%", md: "-5%" }} left="2%" zIndex={0}
+                 zIndex={0}
             ><GradientText style={""}>Nossa História</GradientText></Text>
 
             <Text
                 fontSize={{ base: "20vw", md: "10vw" }} color="hermesBlue.400"
                 textAlign="justify"
-                position="absolute" top={{ base: "53%", md: "30%" }} left="2%" zIndex={10}
+                left="2%" zIndex={10}
             ><GradientText style={""}>O Início</GradientText></Text>
 
             <ZoomParallax />

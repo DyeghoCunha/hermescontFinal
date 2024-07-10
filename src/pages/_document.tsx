@@ -9,7 +9,7 @@ export default function Document() {
         <title>Hermès Contabilidade</title>
         <meta
           name="description"
-          content="Venha fazer parte do Maior time de Devs INDEPENDENTES do Brasil !"
+          content="Relaxe enquanto nós fazemos as contas !"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

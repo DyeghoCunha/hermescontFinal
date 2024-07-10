@@ -20,13 +20,13 @@ export default function Index() {
         offset: ['start start', 'end end']
     })
 
-    const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-    const scale1a = useTransform(scrollYProgress, [0, 1], [1, 5]);
-    const scale2a = useTransform(scrollYProgress, [0, 1], [1, 6]);
-    const scale3a = useTransform(scrollYProgress, [0, 1], [1, 7]);
-    const scale4a = useTransform(scrollYProgress, [0, 1], [1, 8]);
-    const scale5a = useTransform(scrollYProgress, [0, 1], [1, 9]);
-    const scale6a = useTransform(scrollYProgress, [0, 1], [1, 10]);
+    const scale4 = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale1a = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale2a = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale3a = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale4a = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale5a = useTransform(scrollYProgress, [0, 1], [1, 1]);
+    const scale6a = useTransform(scrollYProgress, [0, 1], [1, 1]);
     const pictures = [
         {
             src: Picture1,

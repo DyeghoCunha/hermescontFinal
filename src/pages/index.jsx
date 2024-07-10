@@ -18,6 +18,7 @@ import Valores from "@/components/organisms/Sections/Valores/Valores";
 import Footer from "@/components/organisms/Footer";
 import { ForumLayout } from "@/components/templates/ForumLayout";
 import Servicos from "@/components/organisms/Sections/Servicos/Servicos";
+import NossaHistoria from "@/components/organisms/Sections/NossaHistoria/NossaHistoria"
 
 
 const MotionBox = motion(Box);
@@ -99,23 +100,26 @@ export default function Home() {
     <main   >
       <VStack w="100vw">
 
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
-        </AnimatePresence>
+        </AnimatePresence> */}
         <Box id="home" w="100%">
           <HomeSection />
         </Box>
 
         <SecondSection />
-        <Box id="servicos" ref={container} position="relative" h="200vh">
+         <Servicos />
+         <Segmentos />
+        {/* <Box id="servicos" ref={container} position="relative" h="200vh">
           <Section1 scrollYProgress={scrollYProgress} />
           <Section2 scrollYProgress={scrollYProgress} />
-        </Box>
+        </Box> */}
 
         <Box id="sobre">
-          <Sobre />
+          {/* <Sobre /> */}
+          <NossaHistoria/>
         </Box>
-        <Galeria />
+        {/* <Galeria /> */}
         <Valores />
         <Box id="time">
           <QuemSomos />
