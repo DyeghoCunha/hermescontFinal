@@ -5,6 +5,7 @@ import {
   Heading,
   HStack,
   Image,
+  position,
   SimpleGrid,
   Stack,
   Text,
@@ -37,6 +38,7 @@ import img21 from "@/assets/image/row2/21.jpeg";
 import img23 from "@/assets/image/row2/23.jpeg";
 import img24 from "@/assets/image/row2/24.jpeg";
 import tringulo from "@/assets/image/triangulo.png";
+import GradientBox from "@/components/atoms/GradientBox/GradientBox";
 
 const row1 = [
   img1,
@@ -75,129 +77,264 @@ export default function NossaHistoria() {
       position="relative"
       bgGradient="linear(130deg, rgba(241,226,194,0.8) 0%, rgba(242,242,243,0.8) 40%, rgba(242,242,243,1) 100%)"
     >
-      <SimpleGrid
-        columns={6}
-        m={0}
-        p={0}
-        gap={0}
-        w="100vw"
-        justifyContent="start"
-        alignItems="start"
-        bgColor="white"
-      >
-        {row1.map((img, index) => (
-          <GridItem key={index} h="300px">
-            <Image
-              alt=""
-              opacity="0.8"
-              m={0}
-              p={0}
-              objectFit="cover"
-              objectPosition="center"
-              w="100%"
-              h="100%"
-              src={img.src}
-            />
-          </GridItem>
-        ))}
-      </SimpleGrid>
-
-      <Box
-        mt={0}
-        fontSize={{ base: "10px", md: "32px" }}
-        color="hermesBlue.400"
-        p={{ base: 2, md: 4 }}
-        textAlign="justify"
-        bgColor="transparent"
-        backdropFilter="blur(10px)"
-        //boxShadow="4px 4px 8px black"
-        //bgGradient="linear(130deg, rgba(241,226,194,0.8) 0%, rgba(242,242,243,0.8) 40%, rgba(242,242,243,1) 100%)"
-        // mx={{ base: 0, md: 10 }}
-        zIndex={10}
-      >
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          justifyContent="space-around"
-          my={10}
+      <Box>
+        <SimpleGrid
+          columns={6}
+          m={0}
+          p={0}
+          gap={0}
+          w="100vw"
+          justifyContent="start"
+          alignItems="start"
+          bgColor="white"
         >
-          <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
-            <Heading
-              mb={{ base: 2, md: 10 }}
-              fontSize={{ base: "10px", md: "32px" }}
+          {row1.map((img, index) => (
+            <GridItem key={index} h="300px">
+              <Image
+                alt=""
+                opacity="0.8"
+                m={0}
+                p={0}
+                objectFit="cover"
+                objectPosition="center"
+                w="100%"
+                h="100%"
+                src={img.src}
+              />
+            </GridItem>
+          ))}
+        </SimpleGrid>
+
+        <Box
+          mt={0}
+          fontSize={{ base: "10px", md: "32px" }}
+          color="hermesBlue.400"
+          p={{ base: 2, md: 4 }}
+          textAlign="justify"
+          bgColor="transparent"
+          backdropFilter="blur(10px)"
+          //boxShadow="4px 4px 8px black"
+          //bgGradient="linear(130deg, rgba(241,226,194,0.8) 0%, rgba(242,242,243,0.8) 40%, rgba(242,242,243,1) 100%)"
+          // mx={{ base: 0, md: 10 }}
+          zIndex={10}
+        >
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            justifyContent="space-around"
+            my={10}
+          >
+            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+              <Heading
+                mb={{ base: 2, md: 10 }}
+                fontSize={{ base: "10px", md: "32px" }}
+                lineHeight="59px"
+              >
+                Começamos da mesma forma que muitas empresas, que hoje são
+                sólidas, iniciaram no passado: com o sonho de mudar o status quo
+                da nossa área fazendo pelos clientes algo de valor, realmente
+                significativo para os seus negócios.
+              </Heading>
+              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+                Em 2020, em um cenário de pandemia, extremamente desafiador para
+                pessoas e empresas, nosso sócio fundador, Emir Muse, havia recém
+                saído de uma sociedade que não estava alinhada com seus valores
+                e o seu desejo por entregar resultados que causassem impactos
+                reais para as empresas.
+              </Text>
+            </Box>
+
+            <Card
+              w={{ base: "100%", md: "40%" }}
+              bgColor="transparent"
+              p={{ base: 2, md: 5 }}
+              color="hermesBlue.400"
+              boxShadow="inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(0,0,0,0.2)"
+              justify="center"
             >
-              Começamos da mesma forma que muitas empresas, que hoje são
-              sólidas, iniciaram no passado: com o sonho de mudar o status quo
-              da nossa área fazendo pelos clientes algo de valor, realmente
-              significativo para os seus negócios.
-            </Heading>
-            <Text fontSize={{ base: "10px", md: "32px" }}>
-              Em 2020, em um cenário de pandemia, extremamente desafiador para
-              pessoas e empresas, nosso sócio fundador, Emir Muse, havia recém
-              saído de uma sociedade que não estava alinhada com seus valores e
-              o seu desejo por entregar resultados que causassem impactos reais
-              para as empresas.
-            </Text>
+              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+                Em busca de autonomia total para ir em busca do seu propósito,
+                ele decidiu abrir a{" "}
+                <GradientText style={""}>Hermès</GradientText> com seu amigo e
+                sócio Valmor. Em <strong>26 de novembro de 2020</strong>{" "}
+                começaram as obras para a montagem do nosso escritório,
+                paralelamente aos primeiros serviços prestados para clientes
+                fidelizados que queriam continuar recebendo o padrão de
+                atendimento superior que temos até hoje.
+              </Text>
+            </Card>
+          </Stack>
+        </Box>
+        <HStack
+          position="absolute"
+          right={0}
+          top="550px"
+          justify="center"
+          align="center"
+          zIndex={10}
+          gap={0}
+        >
+          <VStack justify="center" align="center" position="relative">
+            <Image alt="" src={tringulo.src} w="100px" />
+
+            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
+              <GradientBox style={{ px: "5px" }}>
+                <Text
+                  textAlign="center"
+                  fontWeight="bold"
+                  color="white"
+                  w="200px"
+                  fontSize="2vw"
+                >
+                  O Inicio
+                </Text>
+              </GradientBox>
+            </Box>
+          </VStack>
+          <Box w="20vw" h="10px">
+            <GradientBox
+              style={{ whidth: "100%", height: "100%" }}
+            ></GradientBox>
+          </Box>
+        </HStack>
+      </Box>
+
+      <Box position="relative" w="100%" h="100%" >
+        <SimpleGrid
+          columns={6}
+          m={0}
+          p={0}
+          gap={0}
+          w="100vw"
+          justifyContent="start"
+          alignItems="start"
+          bgColor="white"
+        >
+          {row2.map((img, index) => (
+            <GridItem key={index} h="300px">
+              <Image
+                alt=""
+                opacity="0.8"
+                m={0}
+                p={0}
+                objectFit="cover"
+                objectPosition="center"
+                w="100%"
+                h="100%"
+                src={img.src}
+              />
+            </GridItem>
+          ))}
+        </SimpleGrid>
+
+        <HStack
+          position="absolute"
+          right={0}
+          top="550px"
+          justify="center"
+          align="center"
+          zIndex={10}
+          gap={0}
+        >
+          <Box w="48vw" h="10px">
+            <GradientBox
+              style={{ whidth: "100%", height: "100%" }}
+            ></GradientBox>
+          </Box>
+          <VStack justify="center" align="center" position="relative">
+            <Image alt="" src={tringulo.src} w="100px" />
+            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
+              <GradientBox style={{ px: "5px" }}>
+                <Text
+                  textAlign="center"
+                  fontWeight="bold"
+                  color="white"
+                  w="200px"
+                  fontSize="2vw"
+                >
+                  OS 100
+                </Text>
+              </GradientBox>
+            </Box>
+          </VStack>
+          <Box w="28vw" h="10px">
+            <GradientBox
+              style={{ whidth: "100%", height: "100%" }}
+            ></GradientBox>
           </Box>
 
-          <Card
-            w={{ base: "100%", md: "40%" }}
-            bgColor="transparent"
-            p={{ base: 2, md: 5 }}
-            color="hermesBlue.400"
-            boxShadow="inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(0,0,0,0.2)"
+          <VStack justify="center" align="center" position="relative">
+            <Image alt="" src={tringulo.src} w="100px" />
+            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
+              <GradientBox style={{ px: "5px" }}>
+                <Text
+                  textAlign="center"
+                  fontWeight="bold"
+                  color="white"
+                  w="200px"
+                  fontSize="2vw"
+                >
+                  Hoje
+                </Text>
+              </GradientBox>
+            </Box>
+          </VStack>
+          <Box w="16vw" h="10px">
+            <GradientBox
+              style={{ whidth: "100%", height: "100%" }}
+            ></GradientBox>
+          </Box>
+        </HStack>
+        <Box
+          mt={0}
+          fontSize={{ base: "10px", md: "32px" }}
+          color="hermesBlue.400"
+          p={{ base: 2, md: 4 }}
+          textAlign="justify"
+          bgColor="transparent"
+          backdropFilter="blur(10px)"
+          //boxShadow="4px 4px 8px black"
+          //bgGradient="linear(130deg, rgba(241,226,194,0.8) 0%, rgba(242,242,243,0.8) 40%, rgba(242,242,243,1) 100%)"
+          // mx={{ base: 0, md: 10 }}
+          zIndex={10}
+        >
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            justifyContent="space-around"
+            m={20}
+            gap={20}
           >
-            <Text fontSize={{ base: "10px", md: "32px" }}>
-              Em busca de autonomia total para ir em busca do seu propósito, ele
-              decidiu abrir a <GradientText style={""}>Hermès</GradientText> com
-              seu amigo e sócio Valmor. Em{" "}
-              <strong>26 de novembro de 2020</strong> começaram as obras para a
-              montagem do nosso escritório, paralelamente aos primeiros serviços
-              prestados para clientes fidelizados que queriam continuar
-              recebendo o padrão de atendimento superior que temos até hoje.
-            </Text>
-          </Card>
-        </Stack>
+            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+                Como muitos empresários brasileiros – talvez você conheça ou até
+                seja um deles – tínhamos o objetivo de ter um escritório moderno
+                e tecnológico em que desde o primeiro dia contasse com o melhor
+                sistema disponível. Começamos essa busca de forma singela, com
+                dois computadores, cadeiras simples, uma impressora, duas
+                pessoas e muito trabalho.
+              </Text>
+            </Box>
+            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+                Dois meses depois o Gabriel se uniu à causa, e no dia 01/01/2021
+                abrimos oficialmente a Hermès. Ainda no primeiro ano o
+                comprometimento com o atendimento personalizado e humanizado
+                para cada cliente proporcionou o marco de 100 clientes – o que
+                foi muito celebrado na época e provou que estávamos no caminho
+                certo.
+              </Text>
+            </Box>
+            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+                Hoje somos formados pelos mesmos 3 sócios e por um time de
+                profissionais excepcionais que representam nossos valores e
+                compartilham o nosso propósito de fazer o melhor pelos clientes
+                usando as melhores ferramentas tecnológicas sem perder nosso
+                traço fundamental, o contato individualizado e humano.
+              </Text>
+            </Box>
+          </Stack>
+        </Box>
       </Box>
-      <SimpleGrid
-        columns={6}
-        m={0}
-        p={0}
-        gap={0}
-        w="100vw"
-        justifyContent="start"
-        alignItems="start"
-        bgColor="white"
-      >
-        {row2.map((img, index) => (
-          <GridItem key={index} h="300px">
-            <Image
-              alt=""
-              opacity="0.8"
-              m={0}
-              p={0}
-              objectFit="cover"
-              objectPosition="center"
-              w="100%"
-              h="100%"
-              src={img.src}
-            />
-          </GridItem>
-        ))}
-      </SimpleGrid>
-
-      <HStack
-        position="absolute"
-        right={0}
-        top="564px"
-        justify="center"
-        align="center"
-        zIndex={10}
-      >
-        <VStack justify="center" align="center">
-          <Image alt="" src={tringulo.src} w="80px" />
-        </VStack>
-        <Box border="6px solid yellow" w="40vw" h="2px"></Box>
-      </HStack>
 
       <Text
         fontSize="6vw"
@@ -208,15 +345,6 @@ export default function NossaHistoria() {
         top="175px"
       >
         <GradientText style={""}>Nossa História</GradientText>
-      </Text>
-
-      <Text
-        fontSize={{ base: "20vw", md: "10vw" }}
-        color="hermesBlue.400"
-        textAlign="justify"
-        zIndex={10}
-      >
-        <GradientText style={""}>O Início</GradientText>
       </Text>
     </VStack>
   );
