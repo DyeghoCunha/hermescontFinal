@@ -3,8 +3,8 @@ import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
-import { Box, Image } from '@chakra-ui/react';
-import bgimg from "@/assets/image/logo.png"
+import { Box, CircularProgress, Image } from '@chakra-ui/react';
+import bgimg from "@/assets/image/hermesBG.png"
 
 const words = ["Olá", "Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
 const MotionImage = motion(Image);
@@ -23,7 +23,7 @@ export default function Preloader() {
         if (index == words.length - 1) return;
         setTimeout(() => {
             setIndex(index + 1)
-        }, index == 0 ? 100 : 10)
+        }, index == 0 ? 1000 : 150)
     }, [index])
 
     const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`
@@ -42,12 +42,17 @@ export default function Preloader() {
 
     return (
          <MotionDiv zIndex={2000} 
+
          variants={slideUp}  
          bgColor="hermesBlue.400" 
          bgImage={bgimg.src} 
          bgPosition="center"
          bgRepeat="no-repeat"
-         initial="initial" exit="exit" className={styles.introduction}>
+         bgSize="fit"
+         initial="initial" exit="exit" className={styles.introduction}
+         
+         > 
+       
             {dimension.width > 0 &&
                 <>
                     <svg>
@@ -62,6 +67,7 @@ export default function Preloader() {
                     </svg>
                 </>
             }
+          
         </MotionDiv>
     )
 }

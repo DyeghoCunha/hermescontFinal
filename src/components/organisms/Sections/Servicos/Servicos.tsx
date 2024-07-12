@@ -48,7 +48,7 @@ export default function Servicos() {
             </Text>
           </Center>
           <Center w={{ base: "100%", md: "70%" }} h="100%"  >
-            <SimpleGrid columns={{ base: 2, md: 3 }} gap={{ base: 1, md: 3 }} data-scroll data-scroll-speed={0.1}>
+            <SimpleGrid columns={{ base: 2, md: 3 }} gap={{ base: 1, md: 3 }} data-scroll data-scroll-speed={0.08}>
               {props.map((card, index) => (
                 <GridItem key={index} ><ServiceCard name={card.name} image={card.image} /></GridItem>
               ))}
