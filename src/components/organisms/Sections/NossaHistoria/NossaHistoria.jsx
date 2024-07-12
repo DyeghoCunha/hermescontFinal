@@ -235,15 +235,15 @@ export default function NossaHistoria() {
           zIndex={10}
           gap={0}
         >
-          <Box w="48vw" h="10px">
+          <Box w="48vw" h="10px" gap={0}>
             <GradientBox
-              style={{ whidth: "100%", height: "100%" }}
+              style={{ whidth: "100%", height: "100%"}}
             ></GradientBox>
           </Box>
-          <VStack justify="center" align="center" position="relative">
-            <Image alt="" src={tringulo.src} w="100px" />
+          <VStack justify="center" align="center"  position="relative">
+            <Image  alt="" src={tringulo.src} w="100px" />
             <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
-              <GradientBox style={{ px: "5px" }}>
+              <GradientBox style={{ px: "5px"}}>
                 <Text
                   textAlign="center"
                   fontWeight="bold"
@@ -258,7 +258,7 @@ export default function NossaHistoria() {
           </VStack>
           <Box w="28vw" h="10px">
             <GradientBox
-              style={{ whidth: "100%", height: "100%" }}
+              style={{ whidth: "100%", height: "100%"}}
             ></GradientBox>
           </Box>
 
@@ -300,10 +300,11 @@ export default function NossaHistoria() {
           <Stack
             direction={{ base: "column", md: "row" }}
             justifyContent="space-around"
-            m={20}
-            gap={20}
+            my="100px"
+            mx="10px"
+            gap="10px"
           >
-            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+            <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
               <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
                 Como muitos empresários brasileiros – talvez você conheça ou até
                 seja um deles – tínhamos o objetivo de ter um escritório moderno
@@ -313,7 +314,7 @@ export default function NossaHistoria() {
                 pessoas e muito trabalho.
               </Text>
             </Box>
-            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+            <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
               <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
                 Dois meses depois o Gabriel se uniu à causa, e no dia 01/01/2021
                 abrimos oficialmente a Hermès. Ainda no primeiro ano o
@@ -323,7 +324,7 @@ export default function NossaHistoria() {
                 certo.
               </Text>
             </Box>
-            <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
+            <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
               <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
                 Hoje somos formados pelos mesmos 3 sócios e por um time de
                 profissionais excepcionais que representam nossos valores e

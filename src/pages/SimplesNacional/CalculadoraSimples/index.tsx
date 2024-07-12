@@ -294,12 +294,13 @@ export default function CalculadoraSimples() {
     <>
       <PreloaderComponent />
       <PageContainer>
+        
         <Card bgColor="hermesBlue.400" mt="180px" w="700px" boxShadow="4px 4px 8px rgba(0,0,0,0.8)"
           bgImg={BgImg.src}
           bgPos="center"
           bgSize="contain"
           bgRepeat="no-repeat"
-          mb="30px"
+          
         >
           <CardHeader>
             <Heading w="100%" textAlign="center"><GradientText style={""}>Calculadora do Simples Nacional</GradientText></Heading>
@@ -419,7 +420,7 @@ export default function CalculadoraSimples() {
               <GradientText style={""}>Calcular</GradientText>
             </Button>
           </CardBody>
-          <CardFooter gap={2} display={isFooter ? "flex" : "none"}  >
+          <CardFooter gap={2} display={isFooter ? "flex" : "none"} mb="-10px"  >
 
             <VStack w="100%" >
               <HStack w="100%" justify="space-around">
@@ -452,6 +453,7 @@ export default function CalculadoraSimples() {
             </VStack>
           </CardFooter>
         </Card>
+        
       </PageContainer>
     </>
   )

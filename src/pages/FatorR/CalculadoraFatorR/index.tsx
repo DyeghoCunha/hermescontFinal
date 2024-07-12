@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import Preloader from '@/components/Preloader/Preloader';
 import PreloaderComponent from '@/components/PreloaderComponent/PreloaderComponent';
 import { ForumLayout } from '@/components/templates/ForumLayout';
+import { Box } from '@chakra-ui/react';
 
 export default function CalculadoraFatorR() {
 
@@ -14,9 +15,13 @@ export default function CalculadoraFatorR() {
   return (
     <>
       <PreloaderComponent />
+      
       <PageContainer>
+        <Box mt="150px">
         <CalculaFatorR />
+        </Box>
       </PageContainer>
+     
     </>
   )
 }

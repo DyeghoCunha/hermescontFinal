@@ -159,7 +159,7 @@ export default function CalculaFatorR() {
             error='Massa Salarial inválida ! '
           />
 
-          <Button zIndex={110} isDisabled={salario > 0 && faturamento > 0 ? false : true} onClick={handleClick} w="100%" mt="20px" variant="hermes"><Text><GradientText style={""}>Calcular</GradientText></Text></Button>
+          <Button zIndex={10} isDisabled={salario > 0 && faturamento > 0 ? false : true} onClick={handleClick} w="100%" mt="20px" variant="hermes"><Text><GradientText style={""}>Calcular</GradientText></Text></Button>
         </VStack>
       </CardBody>
 

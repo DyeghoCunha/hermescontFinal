@@ -24,7 +24,7 @@ export default function Servicos() {
 
 
   return (
-    <Box ref={description} as='section' w="100vw" h="100vh " mt={{ base: "0px", md: "50px" }}
+    <Box ref={description} as='section' w="100vw" h="105vh " mt={{ base: "0px", md: "50px" }}
       bgGradient="linear(130deg, rgba(241,226,194,1) 0%, rgba(242,242,243,1) 40%, rgba(242,242,243,1) 100%)" >
       <VStack h="100vh" w="100%">
         <Box pl={{ base: "10px", md: "120px" }} pt={{ base: "0px", md: "80px" }} w="100%" mb={0} pb={0} >
