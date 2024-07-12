@@ -14,7 +14,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import Preloader from "@/components/Preloader/Preloader"
 import { useEffect, useRef, useState } from "react";
 import Lenis from 'lenis';
-import Valores from "@/components/organisms/Sections/Valores/Valores";
+import ValoresV2 from "@/components/organisms/Sections/ValoresV2/ValoresV2"
 import Footer from "@/components/organisms/Footer";
 import { ForumLayout } from "@/components/templates/ForumLayout";
 import Servicos from "@/components/organisms/Sections/Servicos/Servicos";
@@ -98,18 +98,20 @@ export default function Home() {
 
   return (
     <main   >
-      <VStack w="100vw">
+      <VStack w="100vw" gap={0}>
 
-        {/* <AnimatePresence mode="wait">
+         <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
-        </AnimatePresence> */}
+        </AnimatePresence> 
         <Box id="home" w="100%">
           <HomeSection />
         </Box>
 
         <SecondSection />
+        <Box id="servicos">
          <Servicos />
          <Segmentos />
+         </Box>
         {/* <Box id="servicos" ref={container} position="relative" h="200vh">
           <Section1 scrollYProgress={scrollYProgress} />
           <Section2 scrollYProgress={scrollYProgress} />
@@ -120,7 +122,8 @@ export default function Home() {
           <NossaHistoria/>
         </Box>
         {/* <Galeria /> */}
-        <Valores />
+
+        <ValoresV2 />
         <Box id="time">
           <QuemSomos />
         </Box>
