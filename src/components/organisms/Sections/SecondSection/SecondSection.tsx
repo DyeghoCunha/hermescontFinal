@@ -27,7 +27,7 @@ export default function SecondSection() {
 
 
   return (
-    <Box as='section' w="100vw" h={{ base: "500px", md: "100vh" }} ref={container} position="relative">
+    <Box as='section' w="100vw" h={{ base: "400px", md: "100vh" }} ref={container} position="relative">
       <HStack justifyContent="space-around" alignItems="center" w="100%">
         <VStack w={{ base: "100%", md: "50%" }} h="100vh" px={{ base: "5px", md: "40px" }} pt={{ base: "80px", md: "150px" }} gap={{ base: "10px", md: "60px" }}>
 
@@ -60,7 +60,7 @@ export default function SecondSection() {
 
       <MotionBox w="100%" style={{ height }}
         position="relative"
-        mt={{ base: "-160px", md: "-60px" }}
+        mt={{ base: "-250px", md: "-60px" }}
 
       >
         <Box bgColor="hermesBlue.400"

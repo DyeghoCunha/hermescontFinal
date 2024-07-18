@@ -123,9 +123,9 @@ export default function Home() {
         </Box>
         {/* <Galeria /> */}
 
-        <ValoresV2 />
+        {/* <ValoresV2 /> */}
         <Box id="time">
-          <QuemSomos />
+          {/* <QuemSomos /> */}
         </Box>
 
 
