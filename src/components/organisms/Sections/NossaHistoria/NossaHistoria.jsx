@@ -25,16 +25,16 @@ import img9 from "@/assets/image/row1/9.jpeg";
 import img10 from "@/assets/image/row1/10.jpeg";
 import img11 from "@/assets/image/row1/11.jpeg";
 import img12 from "@/assets/image/row1/12.jpeg";
-//import img13 from "@/assets/image/row2/13.jpeg";
+import img13 from "@/assets/image/row2/13.jpeg";
 import img14 from "@/assets/image/row2/14.jpeg";
 import img15 from "@/assets/image/row2/15.jpeg";
 import img16 from "@/assets/image/row2/16.jpeg";
-//import img17 from "@/assets/image/row2/17.jpeg";
+import img17 from "@/assets/image/row2/17.jpeg";
 import img18 from "@/assets/image/row2/18.jpeg";
 import img19 from "@/assets/image/row2/19.jpeg";
 import img20 from "@/assets/image/row2/20.jpeg";
 import img21 from "@/assets/image/row2/21.jpeg";
-//import img22 from "@/assets/image/row2/22.jpeg";
+import img22 from "@/assets/image/row2/22.jpeg";
 import img23 from "@/assets/image/row2/23.jpeg";
 import img24 from "@/assets/image/row2/24.jpeg";
 import tringulo from "@/assets/image/triangulo.png";
@@ -55,16 +55,16 @@ const row1 = [
   img12,
 ];
 const row2 = [
-  img12,
+  img13,
   img14,
   img15,
   img16,
-  img16,
+  img17,
   img18,
   img19,
   img20,
   img21,
-  img21,
+  img22,
   img23,
   img24,
 ];
@@ -89,7 +89,7 @@ export default function NossaHistoria() {
           bgColor="white"
         >
           {row1.map((img, index) => (
-            <GridItem key={index} h="300px">
+            <GridItem key={index} h={{ base: "100%", lg: "300px" }}>
               <Image
                 alt=""
                 opacity="0.8"
@@ -106,8 +106,9 @@ export default function NossaHistoria() {
         </SimpleGrid>
 
         <Box
-          mt={0}
-          fontSize={{ base: "10px", md: "32px" }}
+          mt={{base:"0px",lg:"50px"}}
+         
+          fontSize={{ base: "14px", md: "32px" }}
           color="hermesBlue.400"
           p={{ base: 2, md: 4 }}
           textAlign="justify"
@@ -126,15 +127,18 @@ export default function NossaHistoria() {
             <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 5 }}>
               <Heading
                 mb={{ base: 2, md: 10 }}
-                fontSize={{ base: "10px", md: "32px" }}
-                lineHeight="59px"
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
               >
                 Começamos da mesma forma que muitas empresas, que hoje são
                 sólidas, iniciaram no passado: com o sonho de mudar o status quo
                 da nossa área fazendo pelos clientes algo de valor, realmente
                 significativo para os seus negócios.
               </Heading>
-              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+              <Text
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
+              >
                 Em 2020, em um cenário de pandemia, extremamente desafiador para
                 pessoas e empresas, nosso sócio fundador, Emir Muse, havia recém
                 saído de uma sociedade que não estava alinhada com seus valores
@@ -151,7 +155,10 @@ export default function NossaHistoria() {
               boxShadow="inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(0,0,0,0.2)"
               justify="center"
             >
-              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+              <Text
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
+              >
                 Em busca de autonomia total para ir em busca do seu propósito,
                 ele decidiu abrir a{" "}
                 <GradientText style={""}>Hermès</GradientText> com seu amigo e
@@ -167,30 +174,38 @@ export default function NossaHistoria() {
         <HStack
           position="absolute"
           right={0}
-          top="550px"
+          top={{ base: "135px", lg: "550px" }}
           justify="center"
           align="center"
           zIndex={10}
           gap={0}
         >
           <VStack justify="center" align="center" position="relative">
-            <Image alt="" src={tringulo.src} w="100px" />
+            <Image
+              alt=""
+              src={tringulo.src}
+              w={{ base: "50px", lg: "100px" }}
+            />
 
-            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
+            <Box
+              position="absolute"
+              top={{ base: "-30px", lg: "-80px" }}
+              boxShadow="4px 4px 8px white"
+            >
               <GradientBox style={{ px: "5px" }}>
                 <Text
                   textAlign="center"
                   fontWeight="bold"
                   color="white"
-                  w="200px"
-                  fontSize="2vw"
+                  w={{ base: "100px", lg: "200px" }}
+                  fontSize={{ base: "4vw", lg: "2vw" }}
                 >
                   O Inicio
                 </Text>
               </GradientBox>
             </Box>
           </VStack>
-          <Box w="20vw" h="10px">
+          <Box w={{ base: "40vw", lg: "20vw" }} h={{ base: "5px", lg: "10px" }}>
             <GradientBox
               style={{ whidth: "100%", height: "100%" }}
             ></GradientBox>
@@ -198,7 +213,7 @@ export default function NossaHistoria() {
         </HStack>
       </Box>
 
-      <Box position="relative" w="100%" h="100%" >
+      <Box position="relative" w="100%" h="100%">
         <SimpleGrid
           columns={6}
           m={0}
@@ -210,7 +225,7 @@ export default function NossaHistoria() {
           bgColor="white"
         >
           {row2.map((img, index) => (
-            <GridItem key={index} h="300px">
+            <GridItem key={index} h={{ base: "100%", lg: "300px" }}>
               <Image
                 alt=""
                 opacity="0.8"
@@ -229,56 +244,69 @@ export default function NossaHistoria() {
         <HStack
           position="absolute"
           right={0}
-          top="550px"
+          top={{ base: "194px", lg: "550px" }}
           justify="center"
           align="center"
           zIndex={10}
           gap={0}
+          w="100vw"
         >
-          <Box w="48vw" h="10px" gap={0}>
+          <Box
+            w={{ base: "30%", lg: "48vw" }}
+            h={{ base: "5px", lg: "10px" }}
+            gap={0}
+          >
             <GradientBox
-              style={{ whidth: "100%", height: "100%"}}
+              style={{ whidth: "100%", height: "100%" }}
             ></GradientBox>
           </Box>
-          <VStack justify="center" align="center"  position="relative">
-            <Image  alt="" src={tringulo.src} w="100px" />
-            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
-              <GradientBox style={{ px: "5px"}}>
+          <VStack justify="center" align="center" position="relative">
+            <Image
+              alt=""
+              src={tringulo.src}
+              w={{ base: "50px", lg: "100px" }}
+            />
+            <Box position="absolute" top={{ base: "-30px", lg: "-80px" }} boxShadow="4px 4px 8px white">
+              <GradientBox style={{ px: "5px" }}>
                 <Text
                   textAlign="center"
                   fontWeight="bold"
                   color="white"
-                  w="200px"
-                  fontSize="2vw"
+                  w={{ base: "100px", lg: "200px" }}
+                  fontSize={{ base: "4vw", lg: "2vw" }}
                 >
                   OS 100
                 </Text>
               </GradientBox>
             </Box>
           </VStack>
-          <Box w="28vw" h="10px">
+          <Box w={{ base: "50%", lg: "28vw" }} h={{ base: "5px", lg: "10px" }}>
             <GradientBox
-              style={{ whidth: "100%", height: "100%"}}
+              style={{ whidth: "100%", height: "100%" }}
             ></GradientBox>
           </Box>
 
           <VStack justify="center" align="center" position="relative">
-            <Image alt="" src={tringulo.src} w="100px" />
-            <Box position="absolute" top="-80px" boxShadow="4px 4px 8px white">
+            <Image
+              alt=""
+              src={tringulo.src}
+              w={{ base: "50px", lg: "100px" }}
+            />
+            <Box position="absolute" top={{ base: "-30px", lg: "-80px" }} boxShadow="4px 4px 8px white">
               <GradientBox style={{ px: "5px" }}>
                 <Text
                   textAlign="center"
                   fontWeight="bold"
                   color="white"
-                  w="200px"
-                  fontSize="2vw"
+                  w={{ base: "100px", lg: "200px" }}
+                  fontSize={{ base: "4vw", lg: "2vw" }}
                 >
                   Hoje
                 </Text>
               </GradientBox>
             </Box>
           </VStack>
-          <Box w="16vw" h="10px">
+          <Box w={{ base: "20%", lg: "16vw" }} h={{ base: "5px", lg: "10px" }}>
             <GradientBox
               style={{ whidth: "100%", height: "100%" }}
             ></GradientBox>
@@ -286,7 +314,7 @@ export default function NossaHistoria() {
         </HStack>
         <Box
           mt={0}
-          fontSize={{ base: "10px", md: "32px" }}
+          fontSize={{ base: "14px", md: "32px" }}
           color="hermesBlue.400"
           p={{ base: 2, md: 4 }}
           textAlign="justify"
@@ -300,12 +328,15 @@ export default function NossaHistoria() {
           <Stack
             direction={{ base: "column", md: "row" }}
             justifyContent="space-around"
-            my="100px"
+            my={{base:"20px",lg:"100px"}}
             mx="10px"
             gap="10px"
           >
             <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
-              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+              <Text
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
+              >
                 Como muitos empresários brasileiros – talvez você conheça ou até
                 seja um deles – tínhamos o objetivo de ter um escritório moderno
                 e tecnológico em que desde o primeiro dia contasse com o melhor
@@ -315,7 +346,10 @@ export default function NossaHistoria() {
               </Text>
             </Box>
             <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
-              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+              <Text
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
+              >
                 Dois meses depois o Gabriel se uniu à causa, e no dia 01/01/2021
                 abrimos oficialmente a Hermès. Ainda no primeiro ano o
                 comprometimento com o atendimento personalizado e humanizado
@@ -325,7 +359,10 @@ export default function NossaHistoria() {
               </Text>
             </Box>
             <Box w={{ base: "100%", md: "100%" }} p={{ base: 0, md: 5 }}>
-              <Text fontSize={{ base: "10px", md: "32px" }} lineHeight="59px">
+              <Text
+                fontSize={{ base: "14px", md: "32px" }}
+                lineHeight={{ base: "29px", lg: "59px" }}
+              >
                 Hoje somos formados pelos mesmos 3 sócios e por um time de
                 profissionais excepcionais que representam nossos valores e
                 compartilham o nosso propósito de fazer o melhor pelos clientes
@@ -338,12 +375,12 @@ export default function NossaHistoria() {
       </Box>
 
       <Text
-        fontSize="6vw"
+        fontSize={{ base: "10vw", lg: "6vw" }}
         color="hermesBlue.400"
         textAlign="justify"
         zIndex={0}
         position="absolute"
-        top="175px"
+        top={{ base: "50px", lg: "175px" }}
       >
         <GradientText style={""}>Nossa História</GradientText>
       </Text>

@@ -26,7 +26,7 @@ export default function HomeSection() {
         backdropFilter="blur(10px)" 
         data-scroll data-scroll-speed={0.5}
         position="absolute" 
-        zIndex={300}
+        zIndex={30}
         bottom={{ base: "-75px", xl: "-330px", xxl: "-420px" }} opacity="1" color="white"
         fontSize="8vw" w="100%" lineHeight="8vw" >Relaxe enquanto
         <GradientText style={""}> nós fazemos as contas</GradientText></Text>
