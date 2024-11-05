@@ -120,10 +120,12 @@ export default function Home() {
         </Box>
 
         <SecondSection />
-        
-        <Box id="servicos" display={{ base: "none", md: "flex" }}>
+
+        <Box id="servicos" >
           <Servicos />
           <Segmentos />
+
+
         </Box>
         {/* <Box id="servicos" ref={container} position="relative" h="200vh">
           <Section1 scrollYProgress={scrollYProgress} />
