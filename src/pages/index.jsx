@@ -124,15 +124,17 @@ export default function Home() {
         <Box id="servicos" >
           <Servicos />
           <Segmentos />
-
-
         </Box>
+
+
         {/* <Box id="servicos" ref={container} position="relative" h="200vh">
           <Section1 scrollYProgress={scrollYProgress} />
           <Section2 scrollYProgress={scrollYProgress} />
         </Box> */}
 
-        <Box id="sobre" display={{ base: "none", md: "flex" }}>
+        <Box id="sobre" 
+        // display={{ base: "none", md: "flex" }}
+        >
           {/* <Sobre /> */}
           <NossaHistoria />
         </Box>
