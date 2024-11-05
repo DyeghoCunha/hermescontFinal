@@ -21,6 +21,7 @@ export default function HomeSection() {
       <Box display={{ base: "none", md: "flex" }} bgImage={bgSide.src} overflow="hidden" w="100%" right="0" position="absolute" h="100%" bgPosition="end" bgSize="cover" bgRepeat="no-repeat"></Box>
 
       <Text bgColor="rgba(40, 40, 60,0.8)" p={3}
+      display={{ base: "none", md: "flex" }}
         textAlign="center"
         borderRadius="8px" boxShadow="0px 4px 8px black"
         backdropFilter="blur(10px)" 

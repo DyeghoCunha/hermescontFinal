@@ -42,8 +42,8 @@ export default function Footer() {
     bgRepeat="no-repeat" 
     bgSize={{base:"contain",md:"fit"}}>
       <VStack w="100%" >
-        <Box w="100%" h="100%" mb="40px" zIndex={1}>
-          <SvgBezierCurve />
+        <Box w="100%" h="100%" mb="40px" zIndex={1} borderTop="4px solid" borderColor="hermesGold.400">
+          {/* <SvgBezierCurve /> */}
         </Box>
         <Stack direction={{ base: "column", md: "row" }} w="100%" h="100%" justify="space-between" align="center">
           <VStack align="start" justify="start"  w="100%" gap="20px" pl={{base:"10px",md:"5%"}}>
