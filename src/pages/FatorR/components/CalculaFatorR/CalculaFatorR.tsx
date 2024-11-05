@@ -8,6 +8,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import bgImage from "@/assets/image/marcaDagua.png"
 
+
 export default function CalculaFatorR() {
 
   const [faturamento, setFaturamento] = useState<number>(0)
@@ -86,27 +87,39 @@ export default function CalculaFatorR() {
       bgPos="center"
       bgSize="contain"
       bgRepeat="no-repeat"
-      mt={{ base: "50px", md: "10px", xxl: "50px" }}
+      mt={{ base: "-50px", md: "10px", xxl: "50px" }}
+      w={{ base: "300px", md: "100%" }}
+      mb={5} 
     >
-      <CardHeader>
-        <Heading w="100%" textAlign="center" ><GradientText style={""}>Calculadora de Fator R</GradientText></Heading>
+      <CardHeader >
+        <Heading w="100%" fontSize={{base:"20px",md:"30px"}}   textAlign="center" >
+          <GradientText style={""}>Calculadora de Fator R</GradientText></Heading>
       </CardHeader>
-      <CardBody w="100%">
+      <CardBody >
         <Tooltip label={selectAtividadeString} >
           <Box p={2} display={isAtividade ? "flex" : "none"} border="3px solid gray" borderRadius="8px" mb={2}>
             <Text w="100%" h="30px" textAlign="start" noOfLines={1} color="white" fontSize="20px" display={isAtividade ? "block" : "none"}>{selectAtividadeString}</Text>
           </Box>
-        </Tooltip>
+        </Tooltip> 
+        
         <Menu >
-          <MenuButton w="100%" as={Button} boxShadow="inset 4px 4px 8px rgba(0,0,0,0.5),inset -4px -4px 8px rgba(0,0,0,0.5)" outline="1px solid rgba(0,0,0,0.3)" variant={isAtividade ? "outlined" : "hermes"} fontSize="20px">
+          <MenuButton
+            w="100%" as={Button} boxShadow="inset 4px 4px 8px rgba(0,0,0,0.5),inset -4px -4px 8px rgba(0,0,0,0.5)" outline="1px solid rgba(0,0,0,0.3)" variant={isAtividade ? "outlined" : "hermes"} fontSize="20px">
             <GradientText style={""}>Selecione a Atividade</GradientText>
           </MenuButton>
-          <MenuList zIndex={12} m={0} bgColor="rgba(255,255,255,0.4)" border=" 2px solid rgba(255,255,255,0.6)"
+
+          <MenuList zIndex={12}
+
+            m={0} bgColor="rgba(255,255,255,0.4)"
+             border=" 2px solid rgba(255,255,255,0.6)"
             backdropFilter="blur(5px)"
             boxShadow="inset 4px 4px 8px rgba(0,0,0,0.5),inset -4px -4px 8px rgba(0,0,0,0.5), 4px 4px 8px rgba(0,0,0,1), -4px -4px 8px rgba(0,0,0,1)"
             outline="5px solid rgba(40, 40, 60,1)"
+            w={{ base: "100%", md: "600px" }}
+           
           >
-            <Card overflowY="auto" bgColor="hermesBlue.400" h="500px" w="600px" m={5}
+            <Card overflowY="auto" bgColor="hermesBlue.400" h={{ base: "50vh", md: "500px" }} w={{ base: "300px", md: "550px" }} m={{base:0, md:5}}
+            
               sx={{
                 '::-webkit-scrollbar': {
                   width: '6px',
@@ -163,7 +176,7 @@ export default function CalculaFatorR() {
         </VStack>
       </CardBody>
 
-      <CardFooter display={anexo && anexo.length > 2 ? "flex" : "none"} zIndex={110} >
+      <CardFooter display={anexo && anexo.length > 2 ? "flex" : "none"} zIndex={10} >
         <VStack w="100%" color="white" >
           <Divider />
           <Text w="100%" textAlign="start" fontSize="20px">Seu <strong>Fator R</strong> atual é <GradientText style={{ fontSize: "30px" }}>{fatorR} %</GradientText></Text>
