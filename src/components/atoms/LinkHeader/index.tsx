@@ -35,7 +35,7 @@ export default function LinkHeader({ href, children,onClick }: LinkHeaderType) {
       justifyContent="center"
       alignItems="center"
     >
-      <Link href={href} ><Text fontSize="25px" color="hermesWhite.500" 
+      <Link href={href} ><Text fontSize={{base:"15px",md:"25px"}} color="hermesWhite.500" 
       onClick={()=>onClick}
       _hover={{
         color:isSelected? "hermesWhite.500" :"hermesGold.500"}}
