@@ -60,14 +60,14 @@ export default function ConsultaCnpj() {
     )
   }
 
-
+//!alterando o tamanho do card de consulta de cnpj
 
 
   return (
     <>
       <PreloaderComponent />
       <PageContainer>
-        <Heading mb="60px" mt="180px" fontSize="4vw"><GradientText style={""}>Consulta de CNPJ</GradientText></Heading>
+        <Heading mb={{base:"20px",md:"60px"}} mt={{base:"80px",md:"180px"}} fontSize={{base:"9vw",md:"4vw"}}><GradientText style={""}>Consulta de CNPJ</GradientText></Heading>
 
         <Box w="340px" mb="30px">
           <CardDefault>
@@ -92,7 +92,7 @@ export default function ConsultaCnpj() {
                   </HStack>
                 </CardHeader>
                 {empresa &&
-                  <CardBody  w={{ base: "100vw", md: "100" }} >
+                  <CardBody  w={{ base: "100vw", md: "100%" }} >
                     <SimpleGrid columns={{base:1,md:2}} spacingY={5} w="100%">
                       <TextProps isLoading={isLoading} title="Tipo de Unidade" text={empresa.descricao_identificador_matriz_filial} />
                       <TextProps isLoading={isLoading} title="Porte" text={empresa.porte} />
@@ -110,13 +110,15 @@ export default function ConsultaCnpj() {
                       <TextProps isLoading={isLoading} title='Município' text={`${empresa.municipio} - ${empresa.uf}`} />
                       <TextProps isLoading={isLoading} title='CEP' text={empresa.cep} />
                     </SimpleGrid>
+
+                    
                   </CardBody>}
 
 
               </CardDefault>
 
-              <Tooltip label="Veja o Quadro Societário da Empresa" placement='right' hasArrow>
-                <Button boxShadow="-5px -4px 10px rgba(0,0,0,0.8),inset 5px -4px 10px rgba(0,0,0,0.5),inset 5px 4px 10px rgba(255,255,255,0.5)"
+              <Tooltip  label="Veja o Quadro Societário da Empresa" placement='right' hasArrow>
+                <Button display={{base:"none",md:"block"}}boxShadow="-5px -4px 10px rgba(0,0,0,0.8),inset 5px -4px 10px rgba(0,0,0,0.5),inset 5px 4px 10px rgba(255,255,255,0.5)"
                   variant="hermes" borderRadius="50% 0px 0px 50%" px={0} position="absolute"
                   bottom={5} right={0} onClick={() => setIsFlip(!isFlip)}
                   w="50px"
@@ -130,14 +132,14 @@ export default function ConsultaCnpj() {
             back={
 
 
-              <Box position="relative" w={{ base: "100vw", md: "700px" }} h={{ base: "100%", md: "550px" }} mb={10}>
+              <Box position="relative"  w={{ base: "100vw", md: "700px" }} h={{ base: "100%", md: "550px" }} mb={10}>
                 <CardDefault>
                   <CardHeader>
                     <Heading><GradientText style={""}>Detalhes</GradientText></Heading>
                   </CardHeader>
                   <CardBody w="100%" pl={20} justifyContent="start" position="relative">
                     <Heading fontSize={20} mt={0} mb={2}><GradientText style={""}>CNAE</GradientText></Heading>
-                    <VStack w="100%" overflowY="auto" overflowX="hidden" h="550px" >
+                    <VStack w="100%" overflow="auto" overflowX="hidden" h="350px" pb={5} >
                       <HStack w="100%" h="55px" border="1px solid white" px={0} py={0} borderRadius="8px" >
                         <Box pl={2}>
                           <TextPropsCnae isLoading={isLoading} title={empresa.cnae_fiscal} text={empresa.cnae_fiscal_descricao} />
