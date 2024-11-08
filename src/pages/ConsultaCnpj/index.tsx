@@ -111,6 +111,37 @@ export default function ConsultaCnpj() {
                       <TextProps isLoading={isLoading} title='CEP' text={empresa.cep} />
                     </SimpleGrid>
 
+
+                       <Box w="100%" mt={8} justifyContent="start" position="relative" display={{base:"block",md:"none"}}>
+                        
+                  
+                    <Heading fontSize={20} mt={0} mb={2}><GradientText style={""}>CNAE</GradientText></Heading>
+                    <VStack w="100%" overflow="auto" overflowX="hidden" h="350px" pb={5} >
+                      <HStack w="100%" h="100%" border="1px solid white" px={0} py={0} borderRadius="8px" >
+                        <Box pl={2} py={2}>
+                          <TextPropsCnae isLoading={isLoading} title={empresa.cnae_fiscal} text={empresa.cnae_fiscal_descricao} />
+                          <Link href={`/SimplesNacional/TabelaSimplesNacionalCompleta/${removerEspacos(retornaAnexo(empresa.cnae_fiscal))}`}>
+                            <Text fontWeight="bold" color="hermesGold.400" fontSize="20px">{retornaAnexo(`${empresa.cnae_fiscal}`)}</Text>
+                          </Link>
+                        </Box>
+
+                      </HStack>
+
+                      {empresa.cnaes_secundarios.map((cnae: any, index: any) => (
+                        <HStack w="100%" h="100%" key={index} border="1px solid white" px={0} py={0} borderRadius="8px" justify="space-between">
+                          <Box pl={2} py={2}>
+                            <TextPropsCnae isLoading={isLoading} title={cnae.codigo} text={cnae.descricao} />
+                             <Link href={`/SimplesNacional/TabelaSimplesNacionalCompleta/${removerEspacos(retornaAnexo(cnae.codigo))}`}>
+                              <Text  color="hermesGold.400" w="100%" fontSize="20px"  overflowWrap="break-word" fontWeight="bold" >{retornaAnexo(`${cnae.codigo}`)}</Text>
+                            </Link>
+                          </Box>
+                      
+                        </HStack>
+                      ))}
+
+                    </VStack >
+                 
+                  </Box>
                     
                   </CardBody>}
 
