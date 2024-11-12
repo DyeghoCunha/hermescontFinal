@@ -7,7 +7,7 @@ export default function HeaderMenu() {
   return (
     <Menu>
       <MenuButton    >
-        <HStack gap={0} color="white" fontSize="26px"><Text>Ferramentas</Text><ChevronDownIcon color="hermesGold.400" /></HStack>
+        <HStack gap={0} color="white" fontSize={{base:"15px",md:"25px"}}><Text>Ferramentas</Text><ChevronDownIcon color="hermesGold.400" /></HStack>
       </MenuButton>
       <MenuList
 

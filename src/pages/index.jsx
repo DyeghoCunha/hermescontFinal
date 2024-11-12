@@ -1,5 +1,15 @@
 import { DefaultLayout } from "@/components/templates/DefaultLayout";
-import { Box, Center, Flex, HStack, Heading, Image, Mark, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  HStack,
+  Heading,
+  Image,
+  Mark,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 import HomeSection from "@/components/organisms/Sections/HomeSection/HomeSection";
 import SecondSection from "@/components/organisms/Sections/SecondSection/SecondSection";
@@ -10,16 +20,20 @@ import Sobre from "@/components/organisms/Sections/Sobre";
 import SmoothParallaxScroll from "@/components/molecules/SmoothParallaxScroll/SmoothParallaxScroll";
 import Galeria from "@/components/organisms/Sections/Galeria/Galeria";
 import FooterCurved from "@/components/molecules/FooterCurved/FooterCurved";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import Preloader from "@/components/Preloader/Preloader"
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import Preloader from "@/components/Preloader/Preloader";
 import { useEffect, useRef, useState } from "react";
-import Lenis from 'lenis';
-import ValoresV2 from "@/components/organisms/Sections/ValoresV2/ValoresV2"
+import Lenis from "lenis";
+import ValoresV2 from "@/components/organisms/Sections/ValoresV2/ValoresV2";
 import Footer from "@/components/organisms/Footer";
 import { ForumLayout } from "@/components/templates/ForumLayout";
 import Servicos from "@/components/organisms/Sections/Servicos/Servicos";
-import NossaHistoria from "@/components/organisms/Sections/NossaHistoria/NossaHistoria"
-
+import NossaHistoria from "@/components/organisms/Sections/NossaHistoria/NossaHistoria";
 
 const MotionBox = motion(Box);
 
@@ -51,75 +65,78 @@ const Section2 = ({ scrollYProgress }) => {
   const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
 
   return (
-    <MotionBox style={{ scale, rotate }} h={{ base: "800px", md: "100vh" }} position="relative">
+    <MotionBox
+      style={{ scale, rotate }}
+      h={{ base: "800px", md: "100vh" }}
+      position="relative"
+    >
       <Segmentos />
     </MotionBox>
   );
 };
 
-
-
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (
-      async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default
-        const locomotiveScroll = new LocomotiveScroll();
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
 
-        setTimeout(() => {
-          setIsLoading(false);
-          document.body.style.cursor = 'default'
-          window.scrollTo(0, 0);
-        }, 20)
-      }
-    )()
-  }, [])
-
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 20);
+    })();
+  }, []);
 
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end end"]
-  })
+    offset: ["start start", "end end"],
+  });
 
   useEffect(() => {
-    const lenis = new Lenis()
+    const lenis = new Lenis();
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-  }, [])
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
-    <main   >
+    <main>
       <VStack w="100vw" gap={0}>
-
-         <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
-        </AnimatePresence> 
+        </AnimatePresence>
+
         <Box id="home" w="100%">
           <HomeSection />
         </Box>
 
         <SecondSection />
-        <Box id="servicos">
-         <Servicos />
-         <Segmentos />
-         </Box>
+
+        <Box id="servicos" >
+          <Servicos />
+          <Segmentos />
+        </Box>
+
+
         {/* <Box id="servicos" ref={container} position="relative" h="200vh">
           <Section1 scrollYProgress={scrollYProgress} />
           <Section2 scrollYProgress={scrollYProgress} />
         </Box> */}
 
-        <Box id="sobre">
+        <Box id="sobre" 
+        // display={{ base: "none", md: "flex" }}
+        >
           {/* <Sobre /> */}
-          <NossaHistoria/>
+          <NossaHistoria />
         </Box>
         {/* <Galeria /> */}
 
@@ -127,7 +144,6 @@ export default function Home() {
         <Box id="time">
           <QuemSomos />
         </Box>
-
 
         {/**
   
@@ -149,7 +165,5 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page) {
-  return (
-    <DefaultLayout>{page}</DefaultLayout>
-  );
+  return <DefaultLayout>{page}</DefaultLayout>;
 };

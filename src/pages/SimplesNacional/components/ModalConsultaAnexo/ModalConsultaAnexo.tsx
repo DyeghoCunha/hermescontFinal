@@ -97,19 +97,21 @@ export default function ModalConsultaAnexo() {
 
     <Center >
       <Box as='button' justifyContent="end" pr={0} pt={0} pl="0px"
-        alignItems="end" borderRadius="100% 0px 6px 0px"
+        alignItems="end" 
+        borderRadius={{base: "0% 0px 6px 6px",md: "100% 0px 6px 0px"}}
         onClick={onOpen}
         outline="2px solid gray "
         boxShadow="-4px -4px 8px rgba(0,0,0,0.5)"
       >
         <Box 
         bgGradient="linear(130deg, rgba(241,226,194,1) 0%, white 40%, rgba(242,242,243,1) 100%)"
+        w={{base:"88vw",md:"100%"}}
         justifyContent= "end" 
         paddingRight= "1px" 
         paddingTop= "6px" 
-        paddingLeft= "120px"
+        paddingLeft={{base:"0px",md:"120px"}} 
           alignItems= "end" 
-          borderRadius= "100% 0px 8px 0px">
+          borderRadius={{base: "0% 0px 8px 8px",md: "100% 0px 8px 0px"}}>
         <GradientText style={{
           fontSize: "25px", fontWeight: "bold",
         }}>Consulta Anexo</GradientText>

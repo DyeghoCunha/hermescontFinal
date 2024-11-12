@@ -7,7 +7,7 @@ import Lenis from '@studio-freight/lenis'
 import missao from "@/assets/image/missao.png"
 import visao from "@/assets/image/visao.png"
 import valores from "@/assets/image/valores.png"
-import { Box, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Stack, Text, VStack } from '@chakra-ui/react';
 
 
 export default function ValoresV2() {
@@ -58,14 +58,14 @@ export default function ValoresV2() {
    
     bgGradient="linear(180deg, rgba(242,242,243,1) 0%,rgba(242,242,243,1) 50% , rgba(241,226,194,1)100%)"
     >
-      <HStack  h="100%" w="100vw" gap={0}>
+      <Stack direction={{base:"column",md:"row"}} h="100%" w="100vw" gap={0}>
 
         <CardParallax key={`p_${1}`} i={1} {...props[0]} progress={scrollYProgress} range={[1 * 1, 1]} targetScale={1} />
         <CardParallax key={`p_${2}`} i={1} {...props[1]} progress={scrollYProgress} range={[1 * 1, 1]} targetScale={1} />
         <CardParallax key={`p_${3}`} i={2} {...props[2]} progress={scrollYProgress} range={[1 * 1, 1]} targetScale={1} />
           
         
-      </HStack>
+      </Stack>
     </Box>
   )
 }

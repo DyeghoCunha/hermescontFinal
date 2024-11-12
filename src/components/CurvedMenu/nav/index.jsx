@@ -6,7 +6,7 @@ import { menuSlide } from '../anim';
 import Link from './Link';
 import Curve from './Curve';
 import Footer from './Footer';
-import { Box, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Center, HStack, Text, VStack } from '@chakra-ui/react';
 import GradientText from '@/components/atoms/GradientText/GradientText';
 import LinkHeader from '@/components/atoms/LinkHeader';
 import HeaderMenu from '@/components/organisms/Header/HeaderMenu/HeaderMenu';
@@ -76,20 +76,16 @@ export default function Nav({ isActive, setIsActive }) {
             <Text w="100%" textAlign="center"><GradientText style={""}>Menu</GradientText></Text>
           </Box>
           <HStack w="100vw" p={0} gap="0" m={0}
-            borderLeft="5px solid #28283c"
-            borderBottom="5px solid #28283c"
-            borderTop="5px solid #28283c"
+         
 
           >
-            <Box bgColor="rgba(255,255,255,0.2)"
-              outline="5px solid #28283c"
-              borderRadius="8px " boxShadow="inset -4px -4px 8px black,inset 0px 4px 8px black" h="100%" w="100%"></Box>
-            <Box bgColor="hermesBlue.400" h="100%" p={0} m={0}>
+            
+            <VStack bgColor="hermesBlue.400" h="100%" w="100%" p={0} m={0}>
               <LinkHeader href="#home" onClick={() => handleScrollToSection('home')}><Text fontSize="25px">Home</Text></LinkHeader>
               <LinkHeader href="#sobre" onClick={() => handleScrollToSection('sobre')}><Text fontSize="25px">Sobre</Text></LinkHeader>
               <LinkHeader href="#servicos" onClick={() => handleScrollToSection('servicos')} ><Text fontSize="25px">Serviços</Text></LinkHeader>
               <LinkHeader href="#time" onClick={() => handleScrollToSection('time')} ><Text fontSize="25px">Time</Text></LinkHeader>
-            </Box>
+            </VStack>
           </HStack>
           <Box zIndex={1000000000} overflow="auto" bgColor="hermesBlue.400">
             {/**<HeaderMenu />*/}

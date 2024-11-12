@@ -22,6 +22,7 @@ import {
   Divider,
   Button,
   Mark,
+  Stack,
 } from '@chakra-ui/react'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -294,19 +295,19 @@ export default function CalculadoraSimples() {
     <>
       <PreloaderComponent />
       <PageContainer>
-        
-        <Card bgColor="hermesBlue.400" mt="180px" w="700px" boxShadow="4px 4px 8px rgba(0,0,0,0.8)"
+
+        <Card bgColor="hermesBlue.400" mt={{ base: "100px", md: "180px" }} w={{ base: "100vw", md: "700px" }} boxShadow="4px 4px 8px rgba(0,0,0,0.8)"
           bgImg={BgImg.src}
           bgPos="center"
           bgSize="contain"
           bgRepeat="no-repeat"
-          
+          mb={10}
         >
           <CardHeader>
             <Heading w="100%" textAlign="center"><GradientText style={""}>Calculadora do Simples Nacional</GradientText></Heading>
           </CardHeader>
           <CardBody>
-            <HStack my="10px">
+            <Stack direction={{ base: "column", md: "row" }} my="10px">
               <FormControl isInvalid={isRbt12} >
                 <FormLabel>RBT12</FormLabel>
                 <Input
@@ -388,27 +389,30 @@ export default function CalculadoraSimples() {
               </FormControl>
 
 
-            </HStack>
+            </Stack>
 
-            <FormControl as='fieldset' isInvalid={isError} px={4} borderRadius="8px" my={10} border="3px solid gray">
+            <FormControl as='fieldset' isInvalid={isError} px={4} borderRadius={{ base: "8px 8px 0px 0px", md: "8px" }} my={{ base: 0, md: 10 }} border="3px solid gray">
               <FormLabel as='legend' border="3px solid gray" px={2} borderRadius="8px">Selecione um Anexo</FormLabel>
-              <RadioGroup defaultValue=''   onChange={(value) => setAnexo(value)} colorScheme='yellow' mb={8}>
-                  <Radio mr={5} size="lg" value='Anexo I' fontSize="20px">Anexo I</Radio>
-                  <Radio mr={5} size="lg" value='Anexo II' fontSize="20px" >Anexo II</Radio>
-                  <Radio mr={5} size="lg" value='Anexo III' fontSize="20px">Anexo III</Radio>
-                  <Radio mr={5} size="lg" value='Anexo IV' fontSize="20px">Anexo IV</Radio>
-                  <Radio mr={5} size="lg" value='Anexo V' fontSize="20px">Anexo V</Radio>
+              <RadioGroup defaultValue='' onChange={(value) => setAnexo(value)} colorScheme='yellow' mb={8}>
+                <Radio mr={5} size="lg" value='Anexo I' fontSize="20px">Anexo I</Radio>
+                <Radio mr={5} size="lg" value='Anexo II' fontSize="20px" >Anexo II</Radio>
+                <Radio mr={5} size="lg" value='Anexo III' fontSize="20px">Anexo III</Radio>
+                <Radio mr={5} size="lg" value='Anexo IV' fontSize="20px">Anexo IV</Radio>
+                <Radio mr={5} size="lg" value='Anexo V' fontSize="20px">Anexo V</Radio>
               </RadioGroup>
               {!isError ? (
                 <FormHelperText>Em caso de dúvida leia o nosso <Link target='_blank' rel="noopener noreferrer" href="/SimplesNacional/TabelaSimplesNacionalCompleta"> <strong>artigo</strong></Link></FormHelperText>
               ) : (
                 <FormErrorMessage>É necessário escolher um anexo</FormErrorMessage>
               )}
-              <Box position="absolute" right={0} bottom={0}>
+              <Box position="absolute" right={0} bottom={0} display={{ base: "none", md: "block" }}>
                 <ModalConsultaAnexo />
               </Box>
             </FormControl>
 
+            <Box mb={10} display={{ base: "block", md: "none" }}>
+              <ModalConsultaAnexo />
+            </Box>
             <Button
               bgColor="transparent"
               isDisabled={!isBtnValid}
@@ -423,24 +427,24 @@ export default function CalculadoraSimples() {
           <CardFooter gap={2} display={isFooter ? "flex" : "none"} mb="-10px"  >
 
             <VStack w="100%" >
-              <HStack w="100%" justify="space-around">
+              <Stack w="100%" display={{base:"column",md:"row"}} justify="space-around">
                 <Box border="3px solid gray" borderRadius="8px" px={2} mb={10}>
                   <HStack>
-                    
+
                     <Text fontSize="20px" color="gray">Aliquota: </Text>
                     <GradientText style={{ fontSize: "26px" }}>{formatNumberToPercentage(aliquota)}</GradientText>
-                   
+
                   </HStack>
                 </Box>
                 <Box border="3px solid gray" borderRadius="8px" px={2} mb={10}>
                   <HStack>
                     <Text fontSize="20px" color="gray">DAS:</Text>
                     <GradientText style={{ fontSize: "26px" }}>{formatarParaReal3(das)}</GradientText>
-                    </HStack>
+                  </HStack>
                 </Box>
-              </HStack>
+              </Stack>
 
-              <SimpleGrid columns={2} spacingY={8} spacingX={4} justifyContent="center" alignItems="center" w="100%">
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacingY={8} spacingX={4} justifyContent="center" alignItems="center" w="100%">
                 <Box display={simplesNacional["IR"] > 0 ? "block" : "none"}><CardImposto name='IR' percent={ir} value={formatarParaReal2(simplesNacional["IR"])} /></Box>
                 <Box display={simplesNacional["CSLL"] > 0 ? "block" : "none"}><CardImposto name='CSLL' percent={csll} value={formatarParaReal2(simplesNacional["CSLL"])} /></Box>
                 <Box display={simplesNacional["CPP"] > 0 ? "block" : "none"}><CardImposto name='CPP' percent={cpp} value={formatarParaReal2(simplesNacional["CPP"])} /></Box>
@@ -453,7 +457,7 @@ export default function CalculadoraSimples() {
             </VStack>
           </CardFooter>
         </Card>
-        
+
       </PageContainer>
     </>
   )
