@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, CardHeader, Center, Heading, HStack, Skeleton, Text, VStack } from '@chakra-ui/react'
+import { Box, Card, CardBody, CardHeader, Center, Heading, HStack, Skeleton, Stack, Text, VStack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import InputNcm from '../SimplesNacional/components/InputNcm/InputNcm'
 import { INcm } from '@/types/types';
@@ -31,7 +31,7 @@ export default function ConsultaNcm() {
         <CardHeader mb={0} pb={0} >
           <Text fontSize="20px"><GradientText style={""}>NCM</GradientText></Text>
           <VStack align="start" >
-            <HStack justifyContent="start" gap="5%" w="100%">
+            <Stack direction={{base:"column",md:"row"}} justifyContent="start" gap="5%" w="900px">
               <HStack>
                 <Text color="gray">Código: </Text>
                 <Skeleton w="200px" fontSize="20px" isLoaded={!isLoading} h="20px" startColor='rgba(242,242,243,1)' fadeDuration={4} endColor='rgba(241,226,194,1)'>{prop.codigo}</Skeleton>
@@ -44,11 +44,11 @@ export default function ConsultaNcm() {
                 <Text color="gray">Data de Fim: </Text>
                 <Skeleton w="200px" isLoaded={!isLoading} h="20px" startColor='rgba(242,242,243,1)' fadeDuration={4} endColor='rgba(241,226,194,1)'>{prop.data_fim}</Skeleton>
               </HStack>
-            </HStack>
+            </Stack>
           </VStack>
         </CardHeader>
 
-        <CardBody mt={0} w="100%">
+        <CardBody mt={0} pb={10} w="100%">
           <VStack align="start">
             <Text fontSize="20px"><GradientText style={""}>Descrição</GradientText></Text>
             <Skeleton w="100%" isLoaded={!isLoading} h="20px" startColor='rgba(242,242,243,1)' fadeDuration={4} endColor='rgba(241,226,194,1)'>{prop.descricao}</Skeleton>
@@ -63,13 +63,13 @@ export default function ConsultaNcm() {
     <>
       <PreloaderComponent />
       <PageContainer>
-        <Heading mb="60px" mt="180px" fontSize="4vw"><GradientText style={""}>Consulta de NCM</GradientText></Heading>
+        <Heading mb="60px" mt={{base:"80px",md:"180px"}} fontSize={{base:"8vw",md:"4vw"}}><GradientText style={""}>Consulta de NCM</GradientText></Heading>
         <Box w="340px" mb="60px">
           <CardDefault>
             <InputNcm isLoading={isLoading} setResultProp={setNcm} setIsLoading={setIsLoading} setIsSearching={setIsSearching} />
           </CardDefault>
         </Box>
-        <Card p="20px" minH="0px" maxH="600px" bgColor="rgba(255,255,255,0.3) " boxShadow="inset 2px 2px 10px rgba(0,0,0,0.4)"
+        <Card p="20px" minH="0px" w={{base:"100%",md:"80vw"}} maxH={{base:"100%",md:"600px"}} bgColor="rgba(255,255,255,0.3) " boxShadow="inset 2px 2px 10px rgba(0,0,0,0.4)"
           justifyContent="start" alignItems="center" overflowY="auto"
           sx={{
             '::-webkit-scrollbar': {
@@ -87,7 +87,7 @@ export default function ConsultaNcm() {
               },
             },
           }} >
-          <VStack gap={2}  w={{base:"300px",md:"1200"}}>
+          <VStack gap={2}  w={{base:"300px",md:"1200px"}}>
 
             {isLoading ? (
 
