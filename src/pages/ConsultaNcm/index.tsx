@@ -87,7 +87,7 @@ export default function ConsultaNcm() {
               },
             },
           }} >
-          <VStack gap={2} w="1200px" >
+          <VStack gap={2}  w={{base:"300px",md:"1200"}}>
 
             {isLoading ? (
 
