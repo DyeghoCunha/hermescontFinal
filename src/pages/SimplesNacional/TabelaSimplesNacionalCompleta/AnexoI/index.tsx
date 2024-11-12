@@ -12,10 +12,10 @@ export default function AnexoI() {
   return (
     <Center w="100vw" h="100%" bgGradient="linear(130deg, rgba(241,226,194,1) 0%, white 40%, rgba(242,242,243,1) 100%)">
       <VStack align="center" justify="start" h="100%" w="100%" mt="80px">
-        <Box w="50%" h="100%" pb={10}>
+        <Box w={{base:"100%",md:"50%"}} h="100%" pb={10}>
           <VStack >
             <Box as='section'>
-              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 O que é Anexo I do Simples Nacional?
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
@@ -23,7 +23,7 @@ export default function AnexoI() {
               </Text>
             </Box>
             <Box as='section'>
-              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Como calcular os impostos pelo Anexo I?
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
@@ -33,14 +33,14 @@ export default function AnexoI() {
               </Text>
             </Box>
 
-            <Box as='section' w="850px">
-              <Heading mt={10} mb={5} fontSize="30" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"850px"}}>
+              <Heading mt={10} mb={5} fontSize="30" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 ANEXO 1 – Tabela Simples Nacional – Comércio – 2024
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer bgPosition="center" bgSize="contain" bgRepeat="no-repeat" w="810px" border="1px solid #28283c" borderRadius={8} ml={4} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+              <TableContainer bgPosition="center" bgSize="contain" bgRepeat="no-repeat" w={{base:"300px",md:"800px"}} border="1px solid #28283c" borderRadius={8} ml={{base:0,md:4}} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
 
                 <Table>
                   <TableCaption bgColor="hermesBlue.400"></TableCaption>
@@ -107,14 +107,14 @@ export default function AnexoI() {
               </TableContainer>
             </Box>
 
-            <Box as='section' w="850px">
-              <Heading mt={10} mb={5} fontSize="30" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"850px"}}>
+              <Heading mt={10} mb={5} fontSize="30" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Percentual de Repartição dos Tributos
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer bgPosition="center" bgSize="contain" bgRepeat="no-repeat" w="810px" border="1px solid #28283c" borderRadius={8} ml={4} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+              <TableContainer bgPosition="center" bgSize="contain" bgRepeat="no-repeat" w={{base:"300px",md:"800px"}} border="1px solid #28283c" borderRadius={8} ml={{base:0,md:4}} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
 
                 <Table>
                   <TableCaption bgColor="hermesBlue.400"></TableCaption>
