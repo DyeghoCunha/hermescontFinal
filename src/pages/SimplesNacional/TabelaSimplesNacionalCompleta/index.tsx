@@ -11,12 +11,12 @@ export default function TabelaSimplesNacionalCompleta() {
 
   return (
     <Center w="100vw" h="100%" bgGradient="linear(130deg, rgba(241,226,194,1) 0%, white 40%, rgba(242,242,243,1) 100%)" >
-      <HStack w="80%" mt="80px"  >
-        <Box border="1px solid white" as='aside' h="100vh" w="10%" ></Box>
+      <HStack w="100%" mt="80px"  >
+        <Box border="1px solid white" as='aside' display= "none" h="100vh" w="10%" ></Box>
         <Box w="100%" h="100%" pb={10}>
           <VStack mt={10}>
             <Box as='section'>
-              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 O que é o Simples Nacional ?
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
@@ -27,7 +27,7 @@ export default function TabelaSimplesNacionalCompleta() {
               </Text>
             </Box>
             <Box as='section'>
-              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+              <Heading my={10} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Tabelas dos Anexos do Simples Nacional
               </Heading>
               <Text px={5} fontSize="23px" lineHeight="35px">
@@ -38,18 +38,18 @@ export default function TabelaSimplesNacionalCompleta() {
               </Text>
             </Box>
 
-            <Box as='section' w="800px">
-              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"800px"}}>
+              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Anexo I do Simples Nacional
               </Heading>
-              <Text pl={5} as="h2"> Participantes: <strong>Empresas de Comércio </strong>(lojas em geral)</Text>
-              <Text pl={5} as="h3"> Tabela 1 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoI"><GradientText style={""}>Anexo 1 - Comércio</GradientText></Link></Text>
+              <Text pl={{base:0,md:5}} as="h2"> Participantes: <strong>Empresas de Comércio </strong>(lojas em geral)</Text>
+              <Text pl={{base:0,md:5}} as="h3"> Tabela 1 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoI"><GradientText style={""}>Anexo 1 - Comércio</GradientText></Link></Text>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer w="800px" border="1px solid #28283c" borderRadius={8} ml={5} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+               <TableContainer w={{base:"300px",md:"800px"}}  border="1px solid #28283c" borderRadius={8} ml={0} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
 
-                <Table >
+                <Table w={{base:"300px",md:"800px"}} >
                   <TableCaption color="white" bgColor="hermesBlue.400">Tabela Simples Nacional 2024 comércio</TableCaption>
                   <Thead bgColor="hermesBlue.400" >
                     <Tr >
@@ -66,7 +66,7 @@ export default function TabelaSimplesNacionalCompleta() {
                     </Tr>
                   </Thead>
                   <Tbody backgroundImage={image.src} bgPosition="right" bgSize="contain" bgRepeat="no-repeat">
-                    <Tr _hover={{ outline: "2px solid black" }} w="800px" >
+                    <Tr _hover={{ outline: "2px solid black" }} w={{base:"100px",md:"800px"}} >
                       <Td>Até R$ 180.000,00</Td>
                       <Td>4%</Td>
                       <Td>0</Td>
@@ -103,16 +103,16 @@ export default function TabelaSimplesNacionalCompleta() {
               </TableContainer>
             </Box>
 
-            <Box as='section' w="800px">
-              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"800px"}}>
+              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Anexo II do Simples Nacional
               </Heading>
-              <Text pl={5} as="h2"> Participantes: <strong>fábricas/indústrias e empresas industriais</strong></Text>
-              <Text pl={5} as="h3"> Tabela 2 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoII"><GradientText style={""}>Anexo 2 – Indústria</GradientText></Link></Text>
+              <Text pl={{base:0,md:5}} as="h2"> Participantes: <strong>fábricas/indústrias e empresas industriais</strong></Text>
+              <Text pl={{base:0,md:5}} as="h3"> Tabela 2 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoII"><GradientText style={""}>Anexo 2 – Indústria</GradientText></Link></Text>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer w="800px" border="1px solid #28283c" borderRadius={8} ml={5} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+               <TableContainer w={{base:"300px",md:"800px"}}  border="1px solid #28283c" borderRadius={8} ml={0} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
                 <Table>
                   <TableCaption color="white" bgColor="hermesBlue.400">Tabela Simples Nacional 2024 indústria</TableCaption>
                   <Thead bgColor="hermesBlue.400" >
@@ -168,16 +168,16 @@ export default function TabelaSimplesNacionalCompleta() {
             </Box>
 
 
-            <Box as='section' w="800px">
-              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"800px"}}>
+              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Anexo III do Simples Nacional
               </Heading>
-              <Text pl={5} as="h2"> Participantes: <strong>empresas que oferecem serviços de instalação, de reparos e de manutenção. Consideram-se neste anexo ainda, agências de viagens, escritórios de contabilidade, academias, laboratórios, empresas de medicina e odontologia.</strong></Text>
-              <Text pl={5} as="h3"> Tabela 3 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoIII"><GradientText style={""}>Anexo 3 – Prestadores de Serviço</GradientText></Link></Text>
+              <Text pl={{base:0,md:5}} as="h2"> Participantes: <strong>empresas que oferecem serviços de instalação, de reparos e de manutenção. Consideram-se neste anexo ainda, agências de viagens, escritórios de contabilidade, academias, laboratórios, empresas de medicina e odontologia.</strong></Text>
+              <Text pl={{base:0,md:5}} as="h3"> Tabela 3 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoIII"><GradientText style={""}>Anexo 3 – Prestadores de Serviço</GradientText></Link></Text>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer w="800px" border="1px solid #28283c" borderRadius={8} ml={5} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+               <TableContainer w={{base:"300px",md:"800px"}}  border="1px solid #28283c" borderRadius={8} ml={0} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
                 <Table>
                   <TableCaption color="white" bgColor="hermesBlue.400">Tabela Simples Nacional 2024 serviços</TableCaption>
                   <Thead bgColor="hermesBlue.400" >
@@ -232,16 +232,16 @@ export default function TabelaSimplesNacionalCompleta() {
               </TableContainer>
             </Box>
 
-            <Box as='section' w="800px">
-              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section' w={{base:"300px",md:"800px"}}>
+              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Anexo IV do Simples Nacional
               </Heading>
-              <Text pl={5} as="h2"> Participantes: <strong>empresas que fornecem serviço de limpeza, vigilância, obras, construção de imóveis, serviços advocatícios</strong></Text>
-              <Text pl={5} as="h3"> Tabela 4 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoIV"><GradientText style={""}>Anexo 4 – Prestadores de Serviço</GradientText></Link></Text>
+              <Text pl={{base:0,md:5}} as="h2"> Participantes: <strong>empresas que fornecem serviço de limpeza, vigilância, obras, construção de imóveis, serviços advocatícios</strong></Text>
+              <Text pl={{base:0,md:5}} as="h3"> Tabela 4 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoIV"><GradientText style={""}>Anexo 4 – Prestadores de Serviço</GradientText></Link></Text>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer w="800px" border="1px solid #28283c" borderRadius={8} ml={5} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+               <TableContainer w={{base:"300px",md:"800px"}}  border="1px solid #28283c" borderRadius={8} ml={0} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
                 <Table>
                   <TableCaption color="white" bgColor="hermesBlue.400">Tabela Simples Nacional 2024 serviços</TableCaption>
                   <Thead bgColor="hermesBlue.400" >
@@ -296,16 +296,16 @@ export default function TabelaSimplesNacionalCompleta() {
               </TableContainer>
             </Box>
 
-            <Box as='section' w="800px">
-              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={5}>
+            <Box as='section'  w={{base:"300px",md:"800px"}}>
+              <Heading mt={10} mb={5} fontSize="40" color="hermesBlue.500" w="100%" pl={{base:0,md:5}}>
                 Anexo V do Simples Nacional
               </Heading>
-              <Text pl={5} as="h2"> Participantes: <strong> empresas que fornecem serviço de auditoria, jornalismo, tecnologia, publicidade, engenharia, entre outros</strong></Text>
-              <Text pl={5} as="h3"> Tabela 5 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoV"><GradientText style={""}>Anexo 5 – Prestadores de Serviço</GradientText></Link></Text>
+              <Text pl={{base:0,md:5}} as="h2"> Participantes: <strong> empresas que fornecem serviço de auditoria, jornalismo, tecnologia, publicidade, engenharia, entre outros</strong></Text>
+              <Text pl={{base:0,md:5}} as="h3"> Tabela 5 Simples Nacional: <Link href="/SimplesNacional/TabelaSimplesNacionalCompleta/AnexoV"><GradientText style={""}>Anexo 5 – Prestadores de Serviço</GradientText></Link></Text>
               <Text px={5} fontSize="23px" lineHeight="35px">
               </Text>
 
-              <TableContainer w="800px" border="1px solid #28283c" borderRadius={8} ml={5} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
+               <TableContainer w={{base:"300px",md:"800px"}}  border="1px solid #28283c" borderRadius={8} ml={0} mt={10} boxShadow="1px 1px 3px rgba(0,0,0,0.5)">
                 <Table >
                   <TableCaption color="white" bgColor="hermesBlue.400">Tabela Simples Nacional 2024 serviços</TableCaption>
                   <Thead bgColor="hermesBlue.400" >
